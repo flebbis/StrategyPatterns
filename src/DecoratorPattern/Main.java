@@ -6,5 +6,6 @@ public class Main {
         cc.fire();
         cc.gas();
         cc.breaks();
+        //decorator
     }
 }

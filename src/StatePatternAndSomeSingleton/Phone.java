@@ -1,18 +1,18 @@
-package StatePattern;
+package StatePatternAndSomeSingleton;
 
 public class Phone {
     private State state;
     public Phone(){
-        state = new Off();
+        state = Off.getInstance();
     }
 
 
     public void powerButtonClick() {
-        state.powerbutton();
+        changeState(state.powerbutton());
     }
 
     public void fingerPrintScannerClick() {
-        state.powerbutton();
+        changeState(state.fingerPrintScanner());
     }
     void changeState(State state){
         this.state = state;
